@@ -1,0 +1,20 @@
+body {
+    background-color: navajowhite;
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+.animated {
+    -webkit-animation: myanim 1s infinite; /* Safari 4.0 - 8.0 */
+    animation: myanim 1s infinite;
+}
+
+@-webkit-keyframes myanim {
+    from {transform: scale(1);}
+    to {transform: scale(1.1);}
+}
+
+@keyframes myanim {
+    from {transform: scale(1);}
+    to {transform: scale(1.1);}
+}

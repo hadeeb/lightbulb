@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Light Bulb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <span class="fa-stack fa-lg fa-5x grow" id="voice-btn" onclick="startDictation()">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-microphone fa-stack-1x fa-inverse" id="mic-ico"></i>
+            </span>
+        </div>
+        <div class="row justify-content-center">
+            <label id="detect-text">.</label>
+        </div>
+        <div class="row justify-content-center">
+            <i id="loading" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        </div>
+        <div class="row justify-content-center">
+            <div class="justify-content-center">
+                <span class="fa-stack fa-lg fa-5x text-danger" onclick="toggle('red-bulb');">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse" id="red-bulb"></i>
+                </span>
+            </div>
+            <div class="justify-content-center">
+                    <span class="fa-stack fa-lg fa-5x text-success" onclick="toggle('blue-bulb');">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse" id="blue-bulb"></i>
+                    </span>
+                </div>
+        </div>
+    </div>   
+</body>
+</html>
