@@ -24,6 +24,7 @@ function startDictation() {
         recognition.stop();
         document.getElementById("voice-btn").classList.remove("animated");
         document.getElementById("mic-ico").classList.remove("text-danger");
+        document.getElementById("loading").classList.add("fa","fa-spinner","fa-spin","fa-3x","fa-fw");
           
             axios.get('https://cryptic-anchorage-56002.herokuapp.com/bulb', {
               params: {
