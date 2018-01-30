@@ -1,2 +1,2 @@
-# lightbulb
-Frontend for [Gopi's](https://github.com/GopikrishnanSasikumar "Gopi's profile") [??](https://github.com/GopikrishnanSasikumar/ "Repo")
+#VoiceBulb
+Frontend for [Gopi's](https://github.com/GopikrishnanSasikumar "Gopi's profile") [Voicebulb](https://github.com/GopikrishnanSasikumar/Voicebulb "Repo")
