@@ -19,20 +19,44 @@ function startDictation() {
         recognition.stop();
         document.getElementById("voice-btn").classList.remove("animated");
         document.getElementById("mic-ico").classList.remove("text-danger");
-          /* Set URL 
-            axios.get('/console', {
+          
+            axios.get('/bulb', {
               params: {
                 text: e.results[0][0].transcript
               }
             })
             .then(function (response) {
-              console.log(response.data);
-              Actions here
+                console.log(response.data);
+                var data = response.data;
+                console.log(data.status);
+                
+                if(data.status > 0) {
+                    switch(data.blue_state) {
+                        case 1:switchOn('red-bulb');break;
+                        case 2:switchOff('red-bulb');break;
+                    }
+                    switch(data.red_state) {
+                        case 1:switchOn('blue-bulb');break;
+                        case 2:switchOff('blue-bulb');break;
+                    }
+                    document.getElementById('detect-text').innerHTML = data.text;
+                }
+                else {
+                    document.getElementById('detect-text').innerHTML = 
+                        "Sorry, some error has occured while analyzing the text";
+                }
+                document.getElementById("loading").className = "";
+
+              
+              
             })
             .catch(function (error) {
-              console.log(error);
+                document.getElementById('detect-text').innerHTML = 
+                    "Sorry, some error has occured while contacting the server";
+                console.log(error);
+                document.getElementById("loading").className = "";
             });
-            */
+            
       };
 
       recognition.onerror = function(e) {

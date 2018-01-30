@@ -12,19 +12,7 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <span class="fa-stack fa-lg fa-5x grow" id="voice-btn" onclick="startDictation()">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-microphone fa-stack-1x fa-inverse" id="mic-ico"></i>
-            </span>
-        </div>
-        <div class="row justify-content-center">
-            <label id="detect-text">.</label>
-        </div>
-        <div class="row justify-content-center">
-            <i id="loading" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-        </div>
+    <div class="container align-items-center">
         <div class="row justify-content-center">
             <div class="justify-content-center">
                 <span class="fa-stack fa-lg fa-5x text-danger" onclick="toggle('red-bulb');">
@@ -37,7 +25,19 @@
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse" id="blue-bulb"></i>
                     </span>
-                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <label id="detect-text">.</label>
+        </div>
+        <div class="row justify-content-center">
+            <i id="loading" class=""></i>
+        </div>
+        <div class="row justify-content-center">
+            <span class="fa-stack fa-lg fa-5x grow" id="voice-btn" onclick="startDictation()">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-microphone fa-stack-1x fa-inverse" id="mic-ico"></i>
+            </span>
         </div>
     </div>   
 </body>
